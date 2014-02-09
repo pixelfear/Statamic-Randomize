@@ -8,11 +8,11 @@ Let's say you want to show a random testimonial.
 
     {{ randomize }}
       {{ section }}
-				<blockquote>This is great!</blockquote>
-				<p>- John Smith</p>
+        <blockquote>This is great!</blockquote>
+        <p>- John Smith</p>
       {{ /section }}
       {{ section }}
-				<blockquote>I also like it.</blockquote>
+        <blockquote>I also like it.</blockquote>
         <p>- Jane Doe</p>
       {{ /section }}
     {{ /randomize }}
@@ -34,7 +34,7 @@ You would more likely store something like this in an array or grid field in you
     --
 
     {{ randomize array="testimonials" }}
-		  <blockquote>{{ quote }}</blockquote>
+      <blockquote>{{ quote }}</blockquote>
       <p>- {{ name }}</p>
     {{ /randomize }}
 
@@ -42,8 +42,8 @@ You would more likely store something like this in an array or grid field in you
 
 ### If hard coding...
 
-* `delimiter`, `tag`, `tag_pair` or `wrapper`  
-  The tag pair name that denotes the different sections. Defaults to `section`.
+`delimiter`, `tag`, `tag_pair` or `wrapper`  
+The tag pair name that denotes the different sections. Defaults to `section`.
 
     {{ randomize tag="item" }}
       {{ item }}One{{ /item }}
@@ -52,11 +52,10 @@ You would more likely store something like this in an array or grid field in you
 
 ### If using an array / grid field...
 
-* `array`, `grid` or `grid_field`  
-  The field where the data is stored.  
-* `url` or `from`
-  The URL of the page where the array is located. Defaults to the current page.
+`array`, `grid` or `grid_field`  
+The field where the data is stored.  
 
-    {{ randomize array="quotes" from="/about/testimonials" }}
-      ...
-    {{ /randomize }}
+`url` or `from`  
+The URL of the page where the array is located. Defaults to the current page.
+
+    {{ randomize array="quotes" from="/about/testimonials" }}...{{ /randomize }}
